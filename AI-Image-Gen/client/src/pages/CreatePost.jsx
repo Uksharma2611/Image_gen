@@ -25,7 +25,7 @@ const CreatePost = () => {
         // Convert the Blob URL to a Blob object and then to a Base64 string
         const photoBase64 = await getBase64(form.photo); // This will now fetch and convert the Blob URL
   
-        const response = await fetch('http://localhost:8080/api/v1/post', {
+        const response = await fetch('https://image-gen-johp.onrender.com/api/v1/post', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -84,7 +84,7 @@ const CreatePost = () => {
       try {
         setGeneratingImg(true);
 
-        const response = await fetch("http://localhost:8080/api/v1/dalle", {
+        const response = await fetch("https://image-gen-johp.onrender.com/api/v1/dalle", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ prompt: form.prompt }),

@@ -23,7 +23,7 @@ const Home = () => {
 
     try {
       // Corrected the URL for fetching posts
-      const response = await fetch("http://localhost:8080/api/v1/post", {
+      const response = await fetch("https://image-gen-johp.onrender.com/api/v1/post", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
